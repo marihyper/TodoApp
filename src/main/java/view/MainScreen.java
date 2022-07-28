@@ -492,7 +492,7 @@ public class MainScreen extends javax.swing.JFrame {
         //To style table header
         jTableTasks.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
         jTableTasks.getTableHeader().setOpaque(false);
-        jTableTasks.getTableHeader().setBackground(new Color(0, 153, 102));
+        jTableTasks.getTableHeader().setBackground(new Color(110, 133, 183));
         jTableTasks.getTableHeader().setForeground(new Color(255, 255, 255));
 
         //Auto sort  items from  jTable
