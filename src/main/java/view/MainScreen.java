@@ -22,10 +22,6 @@ import util.ButtonColumnCellRederer;
 import util.StatusColumnCellRenderer;
 import util.TaskTableModel;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class MainScreen extends javax.swing.JFrame {
 
     DefaultListModel projectsModel;

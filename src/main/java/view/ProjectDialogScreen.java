@@ -4,10 +4,6 @@ import controller.ProjectController;
 import javax.swing.JOptionPane;
 import model.Project;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class ProjectDialogScreen extends javax.swing.JDialog {
 
     ProjectController projectDAO;
@@ -54,7 +50,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         jTextFieldName.setToolTipText("");
 
         jLabelDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelDescription.setText("DescriÃ§Ã£o");
+        jLabelDescription.setText("Descrição");
 
         jTextAreaDescription.setColumns(20);
         jTextAreaDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -129,7 +125,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jPanelRegisterProject, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(jPanelToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,7 +147,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
 
             projectDAO.save(project);
 
-            JOptionPane.showMessageDialog(rootPane, "Projeto salva com sucesso");
+            JOptionPane.showMessageDialog(rootPane, "Project saved");
             dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);

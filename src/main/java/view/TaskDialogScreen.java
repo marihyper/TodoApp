@@ -16,10 +16,6 @@ import javax.swing.JOptionPane;
 import model.Project;
 import model.Task;
 
-/**
- *
- * @author inspect1
- */
 public class TaskDialogScreen extends javax.swing.JDialog {
 
     TaskController taskDAO;
@@ -81,7 +77,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         jTextFieldName.setToolTipText("");
 
         jLabelDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelDescription.setText("DescriÃ§Ã£o");
+        jLabelDescription.setText("Descrição");
 
         jTextAreaNotes.setColumns(20);
         jTextAreaNotes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -174,7 +170,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelToolBar, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelRegisterTask, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -213,7 +209,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
             task.setCompleted(false);
             taskDAO.save(task);
 
-            JOptionPane.showMessageDialog(rootPane, "Tarefa salva com sucesso");
+            JOptionPane.showMessageDialog(rootPane, "Task saved");
             this.dispose();
         } catch (HeadlessException ex) {
             JOptionPane.showMessageDialog(rootPane, ex);
