@@ -18,14 +18,14 @@ public class ProjectController {
     public void save(Project project) {
         String sql = "INSERT INTO projects(name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
 
-        Connection conn = null;
+        Connection connection = null;
         PreparedStatement stmt = null;
 
         try {
-            //Cria uma conex�o com o banco
-            conn = ConnectionFactory.getConnection();
-            //Cria um PreparedStatment, classe usada para executar a query
-            stmt = conn.prepareStatement(sql);
+            //create connection with databank
+            connection = ConnectionFactory.getConnection();
+            //create prepared statement
+            stmt = connection.prepareStatement(sql);
 
             stmt.setString(1, project.getName());
             stmt.setString(2, project.getDescription());
@@ -42,8 +42,8 @@ public class ProjectController {
                 if (stmt != null) {
                     stmt.close();
                 }
-                if (conn != null) {
-                    conn.close();
+                if (connection != null) {
+                    connection.close();
                 }
             } catch (SQLException ex) {
                 throw new RuntimeException("Erro ao fechar a conexão", ex);
