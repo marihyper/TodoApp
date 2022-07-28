@@ -1,12 +1,8 @@
 package model;
 
 import java.util.Date;
-import java.util.logging.Logger;
+//import java.util.logging.Logger;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class Tag {
     
     private int id;
@@ -14,7 +10,7 @@ public class Tag {
     private String color;
     private Date createdAt;
     private Date updatedAt;
-    private static final Logger LOG = Logger.getLogger(Tag.class.getName());
+//    private static final Logger LOG = Logger.getLogger(Tag.class.getName());
     
 
     public Tag(String name, String color) {

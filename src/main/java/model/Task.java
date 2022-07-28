@@ -2,26 +2,22 @@ package model;
 
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
+//import java.util.logging.Logger;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class Task {
 
     private int id;
     private int idProject;
     private String name;
     private String description;
-    private byte status;
-    private List<Tag> tags;
+//    private byte status;
+//    private List<Tag> tags;
     private String notes;
     private Date deadline;
     private boolean completed;
     private Date createdAt;
     private Date updatedAt;
-    private static final Logger LOG = Logger.getLogger(Task.class.getName());
+//    private static final Logger LOG = Logger.getLogger(Task.class.getName());
 
     public Task() {
         this.completed = false;
@@ -29,11 +25,11 @@ public class Task {
         this.updatedAt = new Date();
     }
 
-    public Task(String name, String description, byte status, List<Tag> tags, String notes, Date deadline, boolean isCompleted, Date createdAt, Date updatedAt) {
+    public Task(String name, String description, String notes, Date deadline, boolean isCompleted, Date createdAt, Date updatedAt) {
         this.name = name;
         this.description = description;
-        this.status = status;
-        this.tags = tags;
+//        this.status = status;
+//        this.tags = tags;
         this.notes = notes;
         this.deadline = deadline;
         this.completed = isCompleted;
@@ -73,21 +69,21 @@ public class Task {
         this.description = description;
     }
 
-    public byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(byte status) {
-        this.status = status;
-    }
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
+//    public byte getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(byte status) {
+//        this.status = status;
+//    }
+//
+//    public List<Tag> getTags() {
+//        return tags;
+//    }
+//
+//    public void setTags(List<Tag> tags) {
+//        this.tags = tags;
+//    }
 
     public String getNotes() {
         return notes;

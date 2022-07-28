@@ -9,10 +9,6 @@ import java.util.List;
 import model.Tag;
 import util.ConnectionFactory;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class TagController {
 
     public void save(Tag tag) {
@@ -35,7 +31,7 @@ public class TagController {
             //Executa a sql para inser��o dos dados
             stmt.execute();
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro ao salvar a tag", ex);
+            throw new RuntimeException("Error: tag NOT saved", ex);
         } finally {
             //Fecha as conex�es
             try {
@@ -46,7 +42,7 @@ public class TagController {
                     conn.close();
                 }
             } catch (SQLException ex) {
-                throw new RuntimeException("Erro ao fechar a conexão", ex);
+                throw new RuntimeException("Error: connection with databank was NOT closed", ex);
             }
         }
 

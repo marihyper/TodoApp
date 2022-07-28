@@ -2,21 +2,16 @@ package model;
 
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
+//import java.util.logging.Logger;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class Project {
-
     private int id;
     private String name;
     private String description;
     private List<Task> tasks;
     private Date createdAt;
     private Date updatedAt;
-    private static final Logger LOG = Logger.getLogger(Project.class.getName());
+//    private static final Logger LOG = Logger.getLogger(Project.class.getName());
 
     public Project(int id, String name, String description, List<Task> tasks, Date createdAt, Date updatedAt) {
         this.id = id;
