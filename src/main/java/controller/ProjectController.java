@@ -6,17 +6,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.Tag;
+import model.Project;
 import util.ConnectionFactory;
 
 /**
  *
  * @author Marcio Michelluzzi
  */
-public class TagDAO {
+public class ProjectController {
 
-    public void save(Tag tag) {
-        String sql = "INSERT INTO tags(name, color, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
+    public void save(Project project) {
+        String sql = "INSERT INTO projects(name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -27,15 +27,15 @@ public class TagDAO {
             //Cria um PreparedStatment, classe usada para executar a query
             stmt = conn.prepareStatement(sql);
 
-            stmt.setString(1, tag.getName());
-            stmt.setString(2, tag.getColor());
-            stmt.setDate(3, new java.sql.Date(tag.getCreatedAt().getTime()));
-            stmt.setDate(4, new java.sql.Date(tag.getUpdatedAt().getTime()));
+            stmt.setString(1, project.getName());
+            stmt.setString(2, project.getDescription());
+            stmt.setDate(3, new java.sql.Date(project.getCreatedAt().getTime()));
+            stmt.setDate(4, new java.sql.Date(project.getUpdatedAt().getTime()));
 
             //Executa a sql para inser��o dos dados
             stmt.execute();
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro ao salvar a tag", ex);
+            throw new RuntimeException("Erro ao salvar o projeto", ex);
         } finally {
             //Fecha as conex�es
             try {
@@ -52,9 +52,9 @@ public class TagDAO {
 
     }
 
-    public void update(Tag tag) {
+    public void update(Project project) {
 
-        String sql = "UPDATE tags SET name = ?, color = ?, createdAt = ?, updatedAt = ? WHERE id = ?";
+        String sql = "UPDATE projects SET name = ?, description = ?, createdAt = ?, updatedAt = ? WHERE id = ?";
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -65,16 +65,16 @@ public class TagDAO {
             //Cria um PreparedStatment, classe usada para executar a query
             stmt = conn.prepareStatement(sql);
 
-            stmt.setString(1, tag.getName());
-            stmt.setString(2, tag.getColor());
-            stmt.setDate(3, new java.sql.Date(tag.getCreatedAt().getTime()));
-            stmt.setDate(4, new java.sql.Date(tag.getUpdatedAt().getTime()));
-            stmt.setInt(4, tag.getId());
+            stmt.setString(1, project.getName());
+            stmt.setString(2, project.getDescription());
+            stmt.setDate(3, new java.sql.Date(project.getCreatedAt().getTime()));
+            stmt.setDate(4, new java.sql.Date(project.getUpdatedAt().getTime()));
+            stmt.setInt(4, project.getId());
 
             //Executa a sql para inser��o dos dados
             stmt.execute();
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro em atualizar a tag", ex);
+            throw new RuntimeException("Erro em atualizar o projeto", ex);
         } finally {
             try {
                 if (stmt != null) {
@@ -89,10 +89,10 @@ public class TagDAO {
         }
     }
 
-    public List<Tag> getAll() {
-        String sql = "SELECT * FROM tags";
+    public List<Project> getAll() {
+        String sql = "SELECT * FROM projects";
 
-        List<Tag> tags = new ArrayList<>();
+        List<Project> projects = new ArrayList<>();
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -109,16 +109,16 @@ public class TagDAO {
             //Enquanto existir dados no banco de dados, fa�a
             while (rset.next()) {
 
-                Tag tag = new Tag();
+                Project project = new Project();
 
-                tag.setId(rset.getInt("id"));
-                tag.setName(rset.getString("name"));
-                tag.setColor(rset.getString("color"));
-                tag.setCreatedAt(rset.getDate("createdAt"));
-                tag.setCreatedAt(rset.getDate("updatedAt"));
+                project.setId(rset.getInt("id"));
+                project.setName(rset.getString("name"));
+                project.setDescription(rset.getString("description"));
+                project.setCreatedAt(rset.getDate("createdAt"));
+                project.setCreatedAt(rset.getDate("updatedAt"));
 
                 //Adiciono o contato recuperado, a lista de contatos
-                tags.add(tag);
+                projects.add(project);
             }
         } catch (SQLException ex) {
             throw new RuntimeException("Erro ao buscar os projetos", ex);
@@ -137,12 +137,12 @@ public class TagDAO {
                 throw new RuntimeException("Erro ao fechar a conexão", ex);
             }
         }
-        return tags;
+        return projects;
     }
 
     public void removeById(int id) {
 
-        String sql = "DELETE FROM tags WHERE id = ?";
+        String sql = "DELETE FROM projects WHERE id = ?";
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -153,7 +153,7 @@ public class TagDAO {
             stmt.setInt(1, id);
             stmt.execute();
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro ao deletar a tag", ex);
+            throw new RuntimeException("Erro ao deletar o projeto", ex);
         } finally {
             try {
                 if (stmt != null) {

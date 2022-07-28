@@ -5,7 +5,7 @@
  */
 package view;
 
-import controller.TaskDAO;
+import controller.TaskController;
 import java.awt.HeadlessException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,7 +22,7 @@ import model.Task;
  */
 public class TaskDialogScreen extends javax.swing.JDialog {
 
-    TaskDAO taskDAO;
+    TaskController taskDAO;
     Project project;
 
     public TaskDialogScreen(java.awt.Frame parent, boolean modal) {
@@ -280,7 +280,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     private void initDataAccessObjects() {
-        taskDAO = new TaskDAO();
+        taskDAO = new TaskController();
     }
 
     private void centralizeTaskDialogScreen() {

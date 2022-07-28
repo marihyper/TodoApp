@@ -13,7 +13,7 @@ import util.ConnectionFactory;
  *
  * @author Marcio Michelluzzi
  */
-public class TaskDAO {
+public class TaskController {
 
     public void save(Task task) {
         String sql = "INSERT INTO tasks(idProject, name, description, " +

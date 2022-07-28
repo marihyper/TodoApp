@@ -5,8 +5,8 @@
  */
 package view;
 
-import controller.ProjectDAO;
-import controller.TaskDAO;
+import controller.ProjectController;
+import controller.TaskController;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -31,8 +31,8 @@ public class MainScreen extends javax.swing.JFrame {
     DefaultListModel projectsModel;
     TaskTableModel tasksModel;
 
-    ProjectDAO projectDAO;
-    TaskDAO taskDAO;
+    ProjectController projectDAO;
+    TaskController taskDAO;
 
     public MainScreen() {
         initComponents();
@@ -448,8 +448,8 @@ public class MainScreen extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void initDataAccessObjects() {
-        projectDAO = new ProjectDAO();
-        taskDAO = new TaskDAO();
+        projectDAO = new ProjectController();
+        taskDAO = new TaskController();
     }
 
     private void loadProjects() {
