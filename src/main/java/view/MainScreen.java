@@ -333,7 +333,7 @@ public class MainScreen extends javax.swing.JFrame {
                 }
             });
         } else {
-            JOptionPane.showMessageDialog(rootPane, "Voc� deve escolher um projeto para essa tarefa", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane, "You must chose a PROJECT for this TASK", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jLabelTasksToolBarAddMouseClicked
 
@@ -359,7 +359,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void jLabelInfosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelInfosMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(rootPane, "Develop by Marcio Michelluzzi");
+        JOptionPane.showMessageDialog(rootPane, "Developed by MariHyper");
     }//GEN-LAST:event_jLabelInfosMouseClicked
 
     private void jTableTasksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableTasksMouseClicked
@@ -376,7 +376,7 @@ public class MainScreen extends javax.swing.JFrame {
                 taskDAO.update(task);
                 break;
             case 4:
-                JOptionPane.showMessageDialog(rootPane, "Editar a tarefa");
+                JOptionPane.showMessageDialog(rootPane, "Edit task");
                 break;
             case 5:
                 taskDAO.removeById(task.getId());
@@ -499,7 +499,7 @@ public class MainScreen extends javax.swing.JFrame {
         jTableTasks.getTableHeader().setBackground(new Color(0, 153, 102));
         jTableTasks.getTableHeader().setForeground(new Color(255, 255, 255));
 
-        //Auto sort dos items da jTable
+        //Auto sort  items from  jTable
         jTableTasks.setAutoCreateRowSorter(true);
 
         //Add event 
