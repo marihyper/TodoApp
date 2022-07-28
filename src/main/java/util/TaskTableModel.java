@@ -6,13 +6,9 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import model.Task;
 
-/**
- *
- * @author Marcio Michelluzzi
- */
 public class TaskTableModel extends AbstractTableModel {
 
-    private String[] columns = {"Nome", "Descrição", "Prazo", "Tarefa Concluída", "Editar", "Excluir"};
+    private String[] columns = {"Name", "Description", "Deadline", "Done", "Edit", "Delete"};
     private List<Task> tasks = new ArrayList<>();
 
     @Override
@@ -59,7 +55,7 @@ public class TaskTableModel extends AbstractTableModel {
             case 4: return "";
             case 5: return "";
             default:
-                return "Dado não encontrado";
+                return "Data NOT found";
         }
     }
 

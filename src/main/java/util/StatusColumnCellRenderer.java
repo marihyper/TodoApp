@@ -13,10 +13,6 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 import model.Task;
 
-/**
- *
- * @author inspect1
- */
 public class StatusColumnCellRenderer extends DefaultTableCellRenderer {
 
     @Override
@@ -24,11 +20,10 @@ public class StatusColumnCellRenderer extends DefaultTableCellRenderer {
         //Cells are by default rendered as a JLabel.
         JLabel label = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
         label.setHorizontalAlignment( JLabel.CENTER );
-
         //Get the status for the current row.
         TaskTableModel taskModel = (TaskTableModel) table.getModel();
         Task task = taskModel.getTasks().get(row);
-
+        
         if (task.getDeadline().equals(new Date())) {
             label.setBackground(Color.YELLOW);
         } else {

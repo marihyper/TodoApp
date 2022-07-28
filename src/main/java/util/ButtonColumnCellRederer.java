@@ -6,17 +6,13 @@
 package util;
 
 import java.awt.Component;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+//import java.awt.event.MouseAdapter;
+//import java.awt.event.MouseEvent;
+//import javax.swing.JOptionPane;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
-/**
- *
- * @author inspect1
- */
 public class ButtonColumnCellRederer extends DefaultTableCellRenderer {
 
     private String buttonType;
