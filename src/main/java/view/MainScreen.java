@@ -27,8 +27,8 @@ public class MainScreen extends javax.swing.JFrame {
     DefaultListModel projectsModel;
     TaskTableModel tasksModel;
 
-    ProjectController projectDAO;
-    TaskController taskDAO;
+    ProjectController projectController;
+    TaskController taskController;
 
     public MainScreen() {
         initComponents();
@@ -369,13 +369,13 @@ public class MainScreen extends javax.swing.JFrame {
             case 1:
                 break;
             case 3:
-                taskDAO.update(task);
+                taskController.update(task);
                 break;
             case 4:
                 JOptionPane.showMessageDialog(rootPane, "Edit task");
                 break;
             case 5:
-                taskDAO.removeById(task.getId());
+                taskController.removeById(task.getId());
                 tasksModel.getTasks().remove(task);
                 
                 int projectIndex = jListProjects.getSelectedIndex();
@@ -444,12 +444,12 @@ public class MainScreen extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void initDataAccessObjects() {
-        projectDAO = new ProjectController();
-        taskDAO = new TaskController();
+        projectController = new ProjectController();
+        taskController = new TaskController();
     }
 
     private void loadProjects() {
-        List<Project> projects = projectDAO.getAll();
+        List<Project> projects = projectController.getAll();
 
         projectsModel.clear();
 
@@ -460,7 +460,7 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     private void loadTasks(int projectId) {
-        List<Task> tasks = taskDAO.getByProjectId(projectId);
+        List<Task> tasks = taskController.getByProjectId(projectId);
 
         tasksModel.setTasks(tasks);
         showJTableTasks(!tasks.isEmpty());
@@ -507,7 +507,7 @@ public class MainScreen extends javax.swing.JFrame {
 
                 if (columnIndex == 3) {
                     Task task = tasksModel.getTasks().get(rowIndex);
-                    taskDAO.update(task);
+                    taskController.update(task);
                 }
             }
         });
