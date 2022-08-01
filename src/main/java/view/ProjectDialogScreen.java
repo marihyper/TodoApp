@@ -44,13 +44,13 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         jPanelRegisterProject.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelName.setText("Nome");
+        jLabelName.setText("Name");
 
         jTextFieldName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextFieldName.setToolTipText("");
 
         jLabelDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelDescription.setText("Descrição");
+        jLabelDescription.setText("Description");
 
         jTextAreaDescription.setColumns(20);
         jTextAreaDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -84,13 +84,13 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        jPanelToolBar.setBackground(new java.awt.Color(0, 153, 102));
-        jPanelToolBar.setForeground(new java.awt.Color(0, 153, 102));
+        jPanelToolBar.setBackground(new java.awt.Color(34, 124, 157));
+        jPanelToolBar.setForeground(new java.awt.Color(34, 124, 157));
         jPanelToolBar.setPreferredSize(new java.awt.Dimension(400, 50));
 
         jLabelToolBarTitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelToolBarTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelToolBarTitle.setText("Projeto");
+        jLabelToolBarTitle.setText("Projects");
 
         jLabelToolBarSave.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelToolBarSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check.png"))); // NOI18N

@@ -31,5 +31,4 @@ public class ButtonColumnCellRederer extends DefaultTableCellRenderer {
         //Return the JLabel which renders the cell.
         return label;
     }
-
 }

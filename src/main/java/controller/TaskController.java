@@ -168,7 +168,7 @@ public class TaskController {
             statement.setInt(1, id);
             statement.execute();
         } catch (SQLException ex) {
-            throw new RuntimeException("Erro ao deletar a tarefa", ex);
+            throw new RuntimeException("Error: task NOT deleted", ex);
         } finally {
             try {
                 if (statement != null) statement.close();

@@ -61,7 +61,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         jPanelRegisterTask.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelNotes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelNotes.setText("Notas");
+        jLabelNotes.setText("Notes");
 
         jTextAreaDescription.setColumns(20);
         jTextAreaDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -71,13 +71,13 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         jScrollPaneDescription.setViewportView(jTextAreaDescription);
 
         jLabelName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelName.setText("Nome");
+        jLabelName.setText("Name");
 
         jTextFieldName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextFieldName.setToolTipText("");
 
         jLabelDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelDescription.setText("Descrição");
+        jLabelDescription.setText("Description");
 
         jTextAreaNotes.setColumns(20);
         jTextAreaNotes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -87,7 +87,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         jScrollPaneNotes.setViewportView(jTextAreaNotes);
 
         jLabelDeadLine.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelDeadLine.setText("Prazo");
+        jLabelDeadLine.setText("Deadline");
 
         jFormattedTextFieldDeadLine.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
@@ -130,13 +130,13 @@ public class TaskDialogScreen extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelToolBar.setBackground(new java.awt.Color(0, 153, 102));
-        jPanelToolBar.setForeground(new java.awt.Color(0, 153, 102));
+        jPanelToolBar.setBackground(new java.awt.Color(34, 124, 157));
+        jPanelToolBar.setForeground(new java.awt.Color(34, 124, 157));
         jPanelToolBar.setPreferredSize(new java.awt.Dimension(400, 50));
 
         jLabelToolBarTitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelToolBarTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelToolBarTitle.setText("Tarefa");
+        jLabelToolBarTitle.setText("Task");
 
         jLabelToolBarSave.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelToolBarSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check.png"))); // NOI18N

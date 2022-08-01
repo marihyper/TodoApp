@@ -25,12 +25,12 @@ public class StatusColumnCellRenderer extends DefaultTableCellRenderer {
         Task task = taskModel.getTasks().get(row);
         
         if (task.getDeadline().equals(new Date())) {
-            label.setBackground(Color.YELLOW);
+            label.setBackground(new Color(255, 226, 179)); //yellow
         } else {
             if (task.getDeadline().after(new Date())) {
-                label.setBackground(Color.GREEN);
+                label.setBackground(new Color(23, 195, 178)); //green
             } else {
-                label.setBackground(Color.RED);
+                label.setBackground(new Color(254, 179, 177)); //red
             }
         }
         //Return the JLabel which renders the cell.

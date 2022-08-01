@@ -78,7 +78,8 @@ public class MainScreen extends javax.swing.JFrame {
         jTableTasks.setFocusable(false);
         jTableTasks.setIntercellSpacing(new java.awt.Dimension(0, 0));
         jTableTasks.setRowHeight(50);
-        jTableTasks.setSelectionBackground(new java.awt.Color(204, 255, 204));
+        jTableTasks.setSelectionBackground(new java.awt.Color(29, 160, 168));
+        jTableTasks.setSelectionForeground(new java.awt.Color(254, 249, 239));
         jTableTasks.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableTasks.setShowHorizontalLines(false);
         jTableTasks.setShowVerticalLines(false);
@@ -95,19 +96,19 @@ public class MainScreen extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(600, 800));
 
-        jPanelToolBar.setBackground(new java.awt.Color(0, 153, 102));
+        jPanelToolBar.setBackground(new java.awt.Color(34, 124, 157));
         jPanelToolBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelToolBarTitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelToolBarTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelToolBarTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelToolBarTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tick.png"))); // NOI18N
-        jLabelToolBarTitle.setText("  App Tarefas");
+        jLabelToolBarTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tick2.png"))); // NOI18N
+        jLabelToolBarTitle.setText("Todo App");
         jLabelToolBarTitle.setToolTipText("");
 
         jLabelToolBarSubTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelToolBarSubTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelToolBarSubTitle.setText("Anote tudo, não esqueça nada");
+        jLabelToolBarSubTitle.setText("Write it down now, remeber it forever!");
 
         jLabelInfos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -145,10 +146,12 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelProjects.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jListProjects.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jListProjects.setForeground(new java.awt.Color(29, 160, 168));
         jListProjects.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListProjects.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jListProjects.setFixedCellHeight(50);
-        jListProjects.setSelectionBackground(new java.awt.Color(0, 153, 102));
+        jListProjects.setSelectionBackground(new java.awt.Color(29, 160, 168));
+        jListProjects.setSelectionForeground(new java.awt.Color(254, 249, 239));
         jListProjects.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jListProjectsMouseClicked(evt);
@@ -177,11 +180,11 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelTasksTollBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelTasksToolBarTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelTasksToolBarTitle.setForeground(new java.awt.Color(0, 153, 102));
-        jLabelTasksToolBarTitle.setText("Tarefas");
+        jLabelTasksToolBarTitle.setForeground(new java.awt.Color(34, 124, 157));
+        jLabelTasksToolBarTitle.setText("Tasks");
 
         jLabelTasksToolBarAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTasksToolBarAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
+        jLabelTasksToolBarAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add2.png"))); // NOI18N
         jLabelTasksToolBarAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelTasksToolBarAddMouseClicked(evt);
@@ -208,11 +211,11 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelProjectsToolBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabelProjectsToolBarTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelProjectsToolBarTitle.setForeground(new java.awt.Color(0, 153, 102));
-        jLabelProjectsToolBarTitle.setText("Projetos");
+        jLabelProjectsToolBarTitle.setForeground(new java.awt.Color(34, 124, 157));
+        jLabelProjectsToolBarTitle.setText("Projects");
 
         jLabelProjectsToolBarAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelProjectsToolBarAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
+        jLabelProjectsToolBarAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add2.png"))); // NOI18N
         jLabelProjectsToolBarAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelProjectsToolBarAddMouseClicked(evt);
@@ -242,17 +245,17 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelEmptyTasksLayout.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabelEmptyTasksTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelEmptyTasksTitle.setForeground(new java.awt.Color(0, 153, 102));
+        jLabelEmptyTasksTitle.setForeground(new java.awt.Color(34, 124, 157));
         jLabelEmptyTasksTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyTasksTitle.setText("Nenhuma Tarefa por aqui :D");
+        jLabelEmptyTasksTitle.setText("Yay! No tasks around here :)");
 
         jLabelEmptyTasksSubTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelEmptyTasksSubTitle.setForeground(new java.awt.Color(153, 153, 153));
         jLabelEmptyTasksSubTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyTasksSubTitle.setText("Clique no botão \"+\" para adicionar uma nova tarefa");
+        jLabelEmptyTasksSubTitle.setText("Click the \"+\" button to creat a new task.");
 
         jLabelEmptyTasksImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyTasksImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lists.png"))); // NOI18N
+        jLabelEmptyTasksImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lists2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelEmptyTasksLayoutLayout = new javax.swing.GroupLayout(jPanelEmptyTasksLayout);
         jPanelEmptyTasksLayout.setLayout(jPanelEmptyTasksLayoutLayout);
@@ -492,8 +495,8 @@ public class MainScreen extends javax.swing.JFrame {
         //To style table header
         jTableTasks.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
         jTableTasks.getTableHeader().setOpaque(false);
-        jTableTasks.getTableHeader().setBackground(new Color(110, 133, 183));
-        jTableTasks.getTableHeader().setForeground(new Color(255, 255, 255));
+        jTableTasks.getTableHeader().setBackground(new Color(34, 124, 157));
+        jTableTasks.getTableHeader().setForeground(new Color(254, 249, 239));
 
         //Auto sort  items from  jTable
         jTableTasks.setAutoCreateRowSorter(true);
@@ -551,7 +554,7 @@ public class MainScreen extends javax.swing.JFrame {
     }
 
     private void setApplicationIcon() {
-        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\inspect1\\Desktop\\Lï¿½gica de programaï¿½ï¿½o III\\Workspace\\TodoApp\\bin\\resources\\tick\\tick.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\Mariana\\Documents\\NetBeansProjects\\TodoApp\\src\\main\\resources\\tick2.png");
         this.setIconImage(icon);
     }
 }
