@@ -107,7 +107,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         jLabelToolBarSubTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelToolBarSubTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelToolBarSubTitle.setText("Anote tudo, n√£o esque√ßa nada");
+        jLabelToolBarSubTitle.setText("Anote tudo, n„o esqueÁa nada");
 
         jLabelInfos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -249,7 +249,7 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelEmptyTasksSubTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelEmptyTasksSubTitle.setForeground(new java.awt.Color(153, 153, 153));
         jLabelEmptyTasksSubTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyTasksSubTitle.setText("Clique no bot√£o \"+\" para adicionar uma nova tarefa");
+        jLabelEmptyTasksSubTitle.setText("Clique no bot„o \"+\" para adicionar uma nova tarefa");
 
         jLabelEmptyTasksImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEmptyTasksImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lists.png"))); // NOI18N
