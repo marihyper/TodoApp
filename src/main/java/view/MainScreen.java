@@ -375,6 +375,7 @@ public class MainScreen extends javax.swing.JFrame {
                 taskController.update(task);
                 break;
             case 4:
+                taskController.update(task);
                 JOptionPane.showMessageDialog(rootPane, "Edit task");
                 break;
             case 5:
@@ -510,6 +511,8 @@ public class MainScreen extends javax.swing.JFrame {
 
                 if (columnIndex == 3) {
                     Task task = tasksModel.getTasks().get(rowIndex);
+                    
+                    
                     taskController.update(task);
                 }
             }
@@ -521,11 +524,11 @@ public class MainScreen extends javax.swing.JFrame {
 //                int row = jTableTasks.rowAtPoint(evt.getPoint());
 //                int col = jTableTasks.columnAtPoint(evt.getPoint());
 //                if (row >= 0 && col == 0) {
-//                    JOptionPane.showMessageDialog(rootPane, "teste");
+//                    JOptionPane.showMessageDialog(rootPane, "test");
 //
 //                }
 //            }
-//        });;
+//        });
     }
 
     private void centralizeMainScreen() {
